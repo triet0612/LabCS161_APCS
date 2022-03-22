@@ -1,0 +1,17 @@
+<P16 - VEHICLE PLATE NUMBER>
+
+START;
+
+PROGRAM VEHICLE_PLATE_NUMBER;
+
+INPUT num;
+
+ANS = ((num%10)+
+       (num%100 - num%10)/10 +
+       (num%1000 - num%100)/100 +
+       (num%10000 - num%1000)/1000 +
+       (num%100000 - num%10000)/10000)%10;
+
+OUTPUT ANS;
+
+END;

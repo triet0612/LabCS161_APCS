@@ -1,0 +1,59 @@
+<P17 - CASH CHANGE>
+
+START;
+
+PROGRAM CASH_CHANGE;
+
+INPUT Integer money;
+
+Integer nam_tram = 0, 
+        hai_tram = 0, 
+        mot_tram = 0, 
+        nam_chuc = 0, 
+        hai_chuc = 0, 
+        muoi_nghin = 0, 
+        nam_nghin = 0, 
+        hai_nghin = 0, 
+        mot_nghin = 0;
+
+WHILE money > 0
+       IF money >= 500000 THEN 
+              money -= 500000
+              nam_tram += 1
+       IF money >= 200000 AND money < 500000 THEN
+              money -= 200000
+              hai_tram += 1
+       IF money >= 100000 AND money < 200000 THEN
+              money -= 100000
+              mot_tram += 1
+       IF money >= 50000 AND money < 100000 THEN
+              money -= 50000
+              nam_chuc += 1
+       IF money >= 20000 AND money < 50000 THEN
+              money -= 20000
+              hai_chuc += 1
+       IF money >= 10000 AND money < 20000 THEN
+              money -= 10000
+              muoi_nghin += 1
+       IF money >= 5000 AND money < 10000 THEN
+              money -= 5000
+              nam_nghin += 1
+       IF money >= 2000 AND money < 5000 THEN
+              money -= 2000
+              hai_nghin += 1
+       IF money >= 1000 AND money < 2000 THEN
+              money -= 1000
+              mot_nghin += 1
+OUTPUT(
+	500000: nam_tram,
+       	200000: hai_tram,
+       	100000:mot_tram,
+       	50000: nam_chuc,
+       	20000: hai_chuc,
+       	10000: muoi_nghin,
+       	5000: nam_nghin,
+       	2000: hai_nghin,
+       	1000: mot_nghin,
+)
+
+END

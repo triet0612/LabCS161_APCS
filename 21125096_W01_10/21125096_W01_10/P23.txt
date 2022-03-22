@@ -1,0 +1,25 @@
+P23 - AREA OF SHAPE
+
+START;
+
+PROGRAM AREA_OF_SHAPE;
+
+INPUT edge, r;
+FLOAT S;
+
+IF (edge == r) THEN
+       ans = 3.14 * (r^2)
+
+IF (r < edge) AND (r > edge * sqrt(3) * 0.5) THEN
+
+       	Integer phi = arccos((edge * sqrt(3)) / (2*r))
+       	ans = 1.5 * r^2 *(phi - sin(phi)) + 
+	      (3.14 * r^2 * 0.5) + 
+	      (0.5 * edge^2 *sqrt(3) * 0.5 * 3)
+
+ELSE
+       ans = (3.14 * r^2 * 0.5) + (0.5 * edge^2 *sqrt(3) * 0.5 * 3)
+
+OUTPUT(ans);
+
+END;

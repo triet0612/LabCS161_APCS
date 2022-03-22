@@ -1,0 +1,17 @@
+<P25 - PACE AND SPEED>
+
+START;
+
+PROGRAM PACE_SPEED;
+
+INPUT (length, time);
+
+speed = length/time;
+pace = time*60/length;
+
+OUTPUT (
+	"Speed:" speed "(km/h)"
+	"Pace:" pace "(minute/km)"
+	);
+
+END;

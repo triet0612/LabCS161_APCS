@@ -1,0 +1,14 @@
+<P24 -REFUND DISCOUNT>
+
+START;
+
+PROGRAM REFUND_DISCOUNT;
+
+INPUT (refund, max);
+
+ans = (max/refund)*100
+
+OUTPUT (ans);
+
+END;
+
